@@ -1,0 +1,32 @@
+/* Ensure this is linked correctly in your HTML */
+
+.row {
+    display: flex; /* Use flexbox for the row layout */
+    flex-wrap: wrap; /* Ensure the columns wrap if they overflow */
+    margin: 0 -15px; /* Adjust if needed to handle spacing */
+}
+
+.col {
+    padding: 0 15px; /* Adjust padding to handle spacing */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+.span_1_of_4 {
+    flex: 0 0 25%; /* 25% width for each column */
+    max-width: 25%; /* Ensure columns don’t exceed 25% width */
+}
+
+/* Optional: Media query for responsive design */
+@media (max-width: 768px) {
+    .span_1_of_4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .span_1_of_4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
